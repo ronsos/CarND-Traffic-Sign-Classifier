@@ -26,7 +26,8 @@ The goals / steps of this project are the following:
 [image13]: ./writeup_images/im5_softmax.png "Sign 5 Softmax Probabilities"
 
 ## Rubric Points
-The grading rubric can be seen here [rubric points](https://review.udacity.com/#!/rubrics/481/view). Each point will be considered in this writeup.
+
+The grading rubric can be seen  [here](https://review.udacity.com/#!/rubrics/481/view). Each point will be considered in this writeup.
 ---
 
 Data Set Summary & Exploration
