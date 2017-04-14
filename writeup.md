@@ -1,7 +1,7 @@
 ## Build a Traffic Sign Recognition Project
 
 The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
+* Load the data set 
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
@@ -26,20 +26,14 @@ The goals / steps of this project are the following:
 [image13]: ./writeup_images/im5_softmax.png "Sign 5 Softmax Probabilities"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
+The grading rubric can be seen here [rubric points](https://review.udacity.com/#!/rubrics/481/view). Each point will be considered in this writeup.
 ---
-###Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+Data Set Summary & Exploration
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+1. Provide a basic summary of the data set.
 
-###Data Set Summary & Exploration
-
-####1. Provide a basic summary of the data set.
-
-The python 'len' and 'max' functions along with the 'shape' method were used to calulate the follow statistics regarding the data set:
+The python 'len' and 'max' functions along with the 'shape' method were used to calulate the following statistics regarding the data set:
 
 * The size of training set is 34799.
 * The size of the validation set is 4410.
@@ -47,7 +41,7 @@ The python 'len' and 'max' functions along with the 'shape' method were used to 
 * The shape of a traffic sign image is 32 x 32.
 * The number of unique classes/labels in the data set is 43.
 
-####2. Include an exploratory visualization of the dataset.
+2. Include an exploratory visualization of the dataset.
 
 A bar chart for each data set is included below. The charts show that training data and test data are very similar in proportion. The validation set is a bit smaller (~10% of the training set, ~33% of the test set size) and the bar chart shows that it has less discretization and a coarser resolution. This leads to the proportions being a bit different than the other data sets. 
 
