@@ -118,12 +118,12 @@ The sign in image 2 (30 kph) is washed out on the upper right corner. This may p
 
 Image 3 (50 kph) is a bit cleaner than the first two images, but there is a washed out portion near the bottom of the sign. Since this doesn't really interfere too much with the numbers, classifying the sign should still be possible. 
 
-Image 4 (60 kph) is clean and should easily be classified, assuming sufficient number of examples in the training data.  
+Image 4 (60 kph) is clean and should easily be classified, assuming a sufficient number of examples in the training data.  
 
 Image 5 (70 kph) has digits that are generally light and part of the '0' is washed out. The way the '0' looks, it could be confused with a '5' or '8'. Since there are no 75 kph or 78 kph signs in the database, this may be classifiable. 
 
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
@@ -138,7 +138,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
