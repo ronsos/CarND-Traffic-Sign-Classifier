@@ -51,7 +51,7 @@ A bar chart for each data set is included below. The charts show that training d
 ![Validation Data][image2]
 ![Test Data][image3]
 
-Design and Test a Model Architecture
+## Design and Test a Model Architecture
 
 1. Preprocessing
 
@@ -103,7 +103,7 @@ Making all four layers 'relu' did not lead to good performance either.
 Selecting 'tanh' for the activation layers was much more successful than any other approach attempted. 
  
 
-Test a Model on New Images
+## Test a Model on New Images
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
@@ -146,7 +146,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 For the second image ... 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+## (Optional) Visualizing the Neural Network
+not considered
 
 
