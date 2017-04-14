@@ -1,9 +1,5 @@
 #**Traffic Sign Recognition** 
 
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Build a Traffic Sign Recognition Project**
@@ -19,14 +15,19 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./writeup_images/bar_training_data.jpg "Training Data Visualizaton"
+[image2]: ./writeup_images/bar_validation_data.jpg "Validation Data Visualizaton"
+[image3]: ./writeup_images/bar_test_data.jpg "Test Data Visualizaton"
+[image4]: ./Sign_images/speed20.png "Traffic Sign 1"
+[image5]: ./Sign_images/speed30.png "Traffic Sign 2"
+[image6]: ./Sign_images/speed50.png "Traffic Sign 3"
+[image7]: ./Sign_images/speed60.png "Traffic Sign 4"
+[image8]: ./Sign_images/speed70.png "Traffic Sign 5"
+[image9]: ./writeup_images/im1_softmax.png "Sign 1 Softmax Probabilities"
+[image10]: ./writeup_images/im2_softmax.png "Sign 2 Softmax Probabilities"
+[image11]: ./writeup_images/im3_softmax.png "Sign 3 Softmax Probabilities"
+[image12]: ./writeup_images/im4_softmax.png "Sign 4 Softmax Probabilities"
+[image13]: ./writeup_images/im5_softmax.png "Sign 5 Softmax Probabilities"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -40,86 +41,74 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 ###Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+####1. Provide a basic summary of the data set.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+The python 'len' and 'max' functions along with the 'shape' method were used to calulate the follow statistics regarding the data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799.
+* The size of the validation set is 4410.
+* The size of test set is 12630.
+* The shape of a traffic sign image is 32 x 32.
+* The number of unique classes/labels in the data set is 43.
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+A bar chart for each data set is included below. The charts show that training data and test data are very similar in proportion. The validation set is a bit smaller (~10% of the training set, ~33% of the test set size) and the bar chart shows that it has less discretization and a coarser resolution. This leads to the proportions being a bit different than the other data sets. 
 
-![alt text][image1]
+![Training Data][image1]
+![Validation Data][image2]
+![Test Data][image3]
 
 ###Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+1. Preprocessing
 
-As a first step, I decided to convert the images to grayscale because ...
+The selected preprocessing was very straightforward. Only normalization was ultimately used on the data. 
 
-Here is an example of a traffic sign image before and after grayscaling.
+Early efforts to consider preprocessing seemed to make no difference in performance. Likely this was a function of a poorly built network. After building and tuning the network, the accuracy targets had already been exceed. This is an obvious area for potential additional performance improvements. 
 
-![alt text][image2]
+2. Model Architecture
 
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
-
-
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
-
-My final model consisted of the following layers:
+The model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x6 	|
+| Activation			| tanh											|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				 	|
+| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16 	|
+| Activation			| tanh											|
+| Pooling				| 2x2 stride, outputs 5x5x16					|
+| Flatten				| output = 400									|
+| Fully Connected 		| output = 120									|
+| Activation 		 	| tanh											|
+| Fully connected		| output = 84									|
+| Activation 		 	| tanh											|
+| Fully connected		| output = 43 									|
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+3. Training the Model 
 
-To train the model, I used an ....
+To train the model, a series of tests were performed to select the learning rate, batch size, and activation layers. Early results showed that batch size much less a discriminator than the learning rate and activation layers. Establishing the order of magnitude of the training rate (~0.001) was fairly straightforward. The activation layer took significant trial and error, as there are a great many possible cominbations. It turned out that making them all the 'tanh' showed a lot of promise. It was then possible to refine the learning rate to 0.0008 for slightly better performance.
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+4. Describe the Approach  
 
-My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+A paper by [Sermanet and LeCun](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) described an approach using the 'tanh' function for this class of sign recongition problem. This appeared to work well based on training. 
+
+Ultimately 30 epochs were used. Most of the accuracy was achieved in 10-11 epochs, but a slight bump upwards did appear around epoch 28. 
+
+Final model results were:
+* training set accuracy of 1.000
+* validation set accuracy of 0.955
+* test set accuracy of 0.934
 
 If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+Initally all four activation layers were chosen be dropout functions. A large number of values were tested for the keep probability but none seemed to provide a good performance (validation accuracy above 0.9).
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+Making all four layers 'relu' did not lead to good performance either. 
+
+Selecting 'tanh' for the activation layers was much more successful than any other approach attempted. 
  
 
 ###Test a Model on New Images
