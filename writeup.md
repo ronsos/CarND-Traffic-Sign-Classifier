@@ -15,9 +15,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./writeup_images/bar_training_data.jpg "Training Data Visualizaton"
-[image2]: ./writeup_images/bar_validation_data.jpg "Validation Data Visualizaton"
-[image3]: ./writeup_images/bar_test_data.jpg "Test Data Visualizaton"
+[image1]: ./writeup_images/bar_training_data.png "Training Data Visualizaton"
+[image2]: ./writeup_images/bar_validation_data.png "Validation Data Visualizaton"
+[image3]: ./writeup_images/bar_test_data.png "Test Data Visualizaton"
 [image4]: ./Sign_images/speed20.png "Traffic Sign 1"
 [image5]: ./Sign_images/speed30.png "Traffic Sign 2"
 [image6]: ./Sign_images/speed50.png "Traffic Sign 3"
