@@ -95,7 +95,7 @@ Final model results were:
 * validation set accuracy of 0.955
 * test set accuracy of 0.934
 
-With regards to the evoluation of the selection of the activation layers, the following is a description of the process:
+With regards to the evolution of the selection of the activation layers, the following is a description of the process:
 Initally all four activation layers were chosen be dropout functions. A large number of values were tested for the keep probability but none seemed to provide a good performance (validation accuracy above 0.9).
 
 Making all four layers 'relu' did not lead to good performance either. 
