@@ -112,7 +112,16 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The first image (20 kph) might be difficult to classify due to the colored horizontal band at the top of the frame. It is the same color as the sign's circular band, and there are not many pixels of separation (two, at most). It may be difficult for the classifier to find the top of the sign. 
+
+The sign in image 2 (30 kph) is washed out on the upper left corner. This may present a challenge. 
+
+Image 3 (50 kph) is a bit cleaner than the first two images, but there is a washed out portion near the bottom of the sign. Since this doesn't really interfere too much with the numbers, classifying the sign should still be possible. 
+
+Image 4 (60 kph) is clean and should easily be classified, assuming sufficient number of examples in the training data.  
+
+Image 5 (70 kph) has digits that are generally light and part of the '0' is washed out. The way the '0' looks, it could be confused with a '5' or '8'. Since there are no 75 kph or 78 kph signs in the database, this may be classifiable. 
+
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
