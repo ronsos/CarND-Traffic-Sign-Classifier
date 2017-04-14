@@ -88,7 +88,7 @@ To train the model, a series of tests were performed to select the learning rate
 
 A paper by [Sermanet and LeCun](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) described an approach using the 'tanh' function for this class of sign recongition problem. This appeared to work well based on training. 
 
-Ultimately 30 epochs were used. Most of the accuracy was achieved in 10-11 epochs, but a slight bump upwards did appear around epoch 28 (from about 0.950 to 0.955 on the validatation set).  
+Ultimately 30 epochs were used. Most of the accuracy was achieved in 10-11 epochs, but a slight bump upwards did appear around epoch 28 (from about 0.950 to 0.955 on the validation set).  
 
 Final model results were:
 * training set accuracy of 1.000
@@ -103,7 +103,7 @@ Making all four layers 'relu' did not lead to good performance either.
 Selecting 'tanh' for the activation layers was much more successful than any other approach attempted. 
  
 
-###Test a Model on New Images
+Test a Model on New Images
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
