@@ -140,20 +140,24 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-For the first image, the model was unable to classify the speed limit sign correctly, and selected class 17 'No entry'. The bar chart below shows the relative probabilties. The correct answer of 0 came in 2nd, with a probability of 6%. Additional entries in the training set may help improve this prediction.
+For the first image, the model was unable to classify the speed limit sign correctly, and selected class 17: 'No entry'. The bar chart below shows the relative probabilties. The correct answer of 0 came in 2nd, with a probability of 6%. Additional entries in the training set may help improve this prediction, as the network was trained with a relative paucity of 20 km/hr signs. 
 
 ![Sign1][image9]
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+The second image classifcation was correct, selecting a 1 (30 km/hr) with a 87% probability. The next highest was a 2 (50 km/hr), with a 10% probability. This could potentially present a problem, as it represents a higher speed limit! Since this comes down to the distinction between a '3' character and a '5' character, it important to have a large amount of training data on these signs to mitigate this potential problem. Fortunately, a high amount of training data was provided on both of these two signs and the model was able to classify it correctly. 
 
+![Sign2][image10]
 
-For the second image ... 
+The third sign was correctly classified, with a relatively high probability of 94%. The remaining 6% was spread among a few other possibilities (10, 6, 12, 42), with none standing out. 
+
+![Sign3][image11]
+
+The fourth sign was correctly classified with a 99% probability. 
+
+![Sign4][image12]
+
+The fifth sign was also classified with a 99% probability. It was surprsiing to observe the certainty in the result, given that part of the digits was washed out. A possible explanation is since the '7' character is clearly delineated in the image, and there is no 90 km/hr entry in the set, there were no other likely options identified by the classifier. 
+
 
 ## (Optional) Visualizing the Neural Network
 not considered
