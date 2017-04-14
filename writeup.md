@@ -86,7 +86,7 @@ To train the model, a series of tests were performed to select the learning rate
 
 4. Describe the Approach  
 
-A paper by [Sermanet and LeCun](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) described an approach using the 'tanh' function for this class of sign recongition problem. This appeared to work well based on training. 
+A paper by [Sermanet and LeCun](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) described an approach using the 'tanh' function for this class of sign recognition problem. This appeared to work well based on training. 
 
 Ultimately 30 epochs were used. Most of the accuracy was achieved in 10-11 epochs, but a slight bump upwards did appear around epoch 28 (from about 0.950 to 0.955 on the validation set).  
 
