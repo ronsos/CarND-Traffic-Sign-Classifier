@@ -123,7 +123,7 @@ Image 4 (60 km/hr) is clean and should easily be classified, assuming a sufficie
 Image 5 (70 km/hr) has digits that are generally light and part of the '0' is washed out. The way the '0' looks, it could be confused with a '5' or '8'. Since there are no 75 kph or 78 kph signs in the database, this may be classifiable. 
 
 
-2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. 
 
 Here are the results of the prediction:
 
@@ -138,7 +138,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. Compared to the test set, which reached 93.4% accuracy, this is not as good. On the other hand, only 1 sign was missed. There is not much data in the training set on 20 km/hr signs. This can be seen in the green training data bar chart above. Class 0 is the 20 km/hr designation, and this class is tied for the fewest number of training examples in the set. 
 
-3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. 
 
 For the first image, the model was unable to classify the speed limit sign correctly, and selected class 17: 'No entry'. The bar chart below shows the relative probabilties. The correct answer of 0 came in 2nd, with a probability of 6%. Additional entries in the training set may help improve this prediction, as the network was trained with a relative paucity of 20 km/hr signs. 
 
