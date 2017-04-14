@@ -51,13 +51,13 @@ A bar chart for each data set is included below. The charts show that training d
 ![Validation Data][image2]
 ![Test Data][image3]
 
-###Design and Test a Model Architecture
+Design and Test a Model Architecture
 
 1. Preprocessing
 
 The selected preprocessing was very straightforward. Only normalization was ultimately used on the data. 
 
-Early efforts to consider preprocessing seemed to make no difference in performance. Likely this was a function of a poorly built network. After building and tuning the network, the accuracy targets had already been exceed. This is an obvious area for potential additional performance improvements. 
+Early efforts to consider preprocessing seemed to make no difference in performance. Likely this was a function of a poorly built network at the time. After building and tuning the network, the accuracy targets had already been exceeded, and no further work was done on preprocessing. This is an area that could be mined for potential future performance improvements. 
 
 2. Model Architecture
 
@@ -82,20 +82,20 @@ The model consisted of the following layers:
 
 3. Training the Model 
 
-To train the model, a series of tests were performed to select the learning rate, batch size, and activation layers. Early results showed that batch size much less a discriminator than the learning rate and activation layers. Establishing the order of magnitude of the training rate (~0.001) was fairly straightforward. The activation layer took significant trial and error, as there are a great many possible cominbations. It turned out that making them all the 'tanh' showed a lot of promise. It was then possible to refine the learning rate to 0.0008 for slightly better performance.
+To train the model, a series of tests were performed to select the learning rate, batch size, and activation layers. Early results showed that batch size was much less of a discriminator than the learning rate and activation layers, so the default 128 batch size was selected. Establishing the order of magnitude of the training rate (~0.001) was fairly straightforward. The activation layer took significant trial and error, as there are a great many possible cominbations. It turned out that making them all the 'tanh' showed a lot of promise. It was then possible to refine the learning rate to 0.0008 for slightly better performance.
 
 4. Describe the Approach  
 
 A paper by [Sermanet and LeCun](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) described an approach using the 'tanh' function for this class of sign recongition problem. This appeared to work well based on training. 
 
-Ultimately 30 epochs were used. Most of the accuracy was achieved in 10-11 epochs, but a slight bump upwards did appear around epoch 28. 
+Ultimately 30 epochs were used. Most of the accuracy was achieved in 10-11 epochs, but a slight bump upwards did appear around epoch 28 (from about 0.950 to 0.955 on the validatation set).  
 
 Final model results were:
 * training set accuracy of 1.000
 * validation set accuracy of 0.955
 * test set accuracy of 0.934
 
-If an iterative approach was chosen:
+With regards to the evoluation of the selection of the activation layers, the following is a description of the process:
 Initally all four activation layers were chosen be dropout functions. A large number of values were tested for the keep probability but none seemed to provide a good performance (validation accuracy above 0.9).
 
 Making all four layers 'relu' did not lead to good performance either. 
