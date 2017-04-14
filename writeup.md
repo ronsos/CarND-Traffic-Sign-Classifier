@@ -158,6 +158,7 @@ The fourth sign was correctly classified with a 99% probability.
 
 The fifth sign was also classified with a 99% probability. It was surprsiing to observe the certainty in the result, given that part of the digits was washed out. A possible explanation is since the '7' character is clearly delineated in the image, and there is no 90 km/hr entry in the set, there were no other likely options identified by the classifier. 
 
+![Sign5][image13]
 
 ## (Optional) Visualizing the Neural Network
 not considered
