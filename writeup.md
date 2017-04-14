@@ -82,7 +82,7 @@ The model consisted of the following layers:
 
 3. Training the Model 
 
-To train the model, a series of tests were performed to select the learning rate, batch size, and activation layers. Early results showed that batch size was much less of a discriminator than the learning rate and activation layers, so the default 128 batch size was selected. Establishing the order of magnitude of the training rate (~0.001) was fairly straightforward. The activation layer took significant trial and error, as there are a great many possible cominbations. It turned out that making them all the 'tanh' showed a lot of promise. It was then possible to refine the learning rate to 0.0008 for slightly better performance.
+To train the model, a series of tests were performed to select the learning rate, batch size, and activation layers. Early results showed that batch size was much less of a discriminator than the learning rate and activation layers, so the default batch size of 128 was selected. Establishing the order of magnitude of the training rate (~0.001) was fairly straightforward. The activation layer took significant trial and error, as there are a great many possible cominbations. It turned out that making them all the 'tanh' showed a lot of promise. It was then possible to refine the learning rate to 0.0008 for slightly better performance.
 
 4. Describe the Approach  
 
