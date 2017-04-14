@@ -107,20 +107,20 @@ Selecting 'tanh' for the activation layers was much more successful than any oth
 
 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Five German traffic signs were obtained from the web: 
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image (20 kph) might be difficult to classify due to the colored horizontal band at the top of the frame. It is the same color as the sign's circular band, and there are not many pixels of separation (two, at most). It may be difficult for the classifier to find the top of the sign. 
+The first image (20 km/hr) might be difficult to classify due to the colored horizontal band at the top of the frame. It is the same color as the sign's circular band, and there are not many pixels of separation (two, at most). It may be difficult for the classifier to find the top of the sign. 
 
-The sign in image 2 (30 kph) is washed out on the upper right corner. This may present a challenge. 
+The sign in image 2 (30 km/hr) is washed out on the upper right corner. This may present a challenge. 
 
-Image 3 (50 kph) is a bit cleaner than the first two images, but there is a washed out portion near the bottom of the sign. Since this doesn't really interfere too much with the numbers, classifying the sign should still be possible. 
+Image 3 (50 km/hr) is a bit cleaner than the first two images, but there is a washed out portion near the bottom of the sign. Since this doesn't really interfere too much with the numbers, classifying the sign should still be possible. 
 
-Image 4 (60 kph) is clean and should easily be classified, assuming a sufficient number of examples in the training data.  
+Image 4 (60 km/hr) is clean and should easily be classified, assuming a sufficient number of examples in the training data.  
 
-Image 5 (70 kph) has digits that are generally light and part of the '0' is washed out. The way the '0' looks, it could be confused with a '5' or '8'. Since there are no 75 kph or 78 kph signs in the database, this may be classifiable. 
+Image 5 (70 km/hr) has digits that are generally light and part of the '0' is washed out. The way the '0' looks, it could be confused with a '5' or '8'. Since there are no 75 kph or 78 kph signs in the database, this may be classifiable. 
 
 
 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
@@ -129,14 +129,14 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| 20 km/hr speed limit      		| No entry   									| 
+| 30 km/hr speed limit     			| 30 km/hr speed limit 										|
+| 50 km/hr speed limit					| 50 km/hr speed limit											|
+| 60 km/hr speed limit	      		| 60 km/hr speed limit					 				|
+| 70 km/hr speed limit			| 70 km/hr speed limit     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. Compared to the test set, which reached 93.4% accuracy, this is not as good. On the other hand, only 1 sign was missed. There is not much data in the training set on 20 km/hr signs. This can be seen in the green training data bar chart above. Class 0 is the 20 km/hr designation, and this class has the least number of training examples as any class in the set. 
 
 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
