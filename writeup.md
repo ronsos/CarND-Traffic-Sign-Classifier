@@ -114,7 +114,7 @@ Here are five German traffic signs that I found on the web:
 
 The first image (20 kph) might be difficult to classify due to the colored horizontal band at the top of the frame. It is the same color as the sign's circular band, and there are not many pixels of separation (two, at most). It may be difficult for the classifier to find the top of the sign. 
 
-The sign in image 2 (30 kph) is washed out on the upper left corner. This may present a challenge. 
+The sign in image 2 (30 kph) is washed out on the upper right corner. This may present a challenge. 
 
 Image 3 (50 kph) is a bit cleaner than the first two images, but there is a washed out portion near the bottom of the sign. Since this doesn't really interfere too much with the numbers, classifying the sign should still be possible. 
 
