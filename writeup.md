@@ -136,7 +136,7 @@ Here are the results of the prediction:
 | 70 km/hr speed limit			| 70 km/hr speed limit     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. Compared to the test set, which reached 93.4% accuracy, this is not as good. On the other hand, only 1 sign was missed. There is not much data in the training set on 20 km/hr signs. This can be seen in the green training data bar chart above. Class 0 is the 20 km/hr designation, and this class has the least number of training examples as any class in the set. 
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. Compared to the test set, which reached 93.4% accuracy, this is not as good. On the other hand, only 1 sign was missed. There is not much data in the training set on 20 km/hr signs. This can be seen in the green training data bar chart above. Class 0 is the 20 km/hr designation, and this class is tied for the fewest number of training examples in the set. 
 
 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
