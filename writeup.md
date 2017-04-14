@@ -140,9 +140,9 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+For the first image, the model was unable to classify the speed limit sign correctly, and selected class 17 'No entry'. The bar chart below shows the relative probabilties. The correct answer of 0 came in 2nd, with a probability of 6%. Additional entries in the training set may help improve this prediction.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+![Sign1][image9]
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
